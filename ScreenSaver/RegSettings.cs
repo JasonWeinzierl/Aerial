@@ -39,8 +39,8 @@ namespace Aerial
                 UseTimeOfDay = bool.Parse(key.GetValue(nameof(UseTimeOfDay)) as string ?? "True");
                 CacheVideos = bool.Parse(key.GetValue(nameof(CacheVideos)) as string ?? "True");
                 CacheLocation = key.GetValue(nameof(CacheLocation)) as string;
-                ChosenMovies = (key.GetValue(nameof(ChosenMovies)) as string ?? "");
-                JsonURL = key.GetValue(nameof(JsonURL)) as string;
+                ChosenMovies = key.GetValue(nameof(ChosenMovies)) as string ?? "";
+                JsonURL = key.GetValue(nameof(JsonURL)) as string ?? JsonURL;
             }
         }
 
